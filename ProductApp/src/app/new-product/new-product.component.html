@@ -1,0 +1,76 @@
+<div class="card" style="margin-top: 2%;border: solid green 2px">
+    <form #addProduct='ngForm' (ngSubmit)="AddProducts()">
+        <div class="card-header">
+            {{title}}
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><label>Product Id</label></td>
+                            <td><input type="text" name="p_id" [(ngModel)]="productItem.productId" 
+                                #p_id="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_id.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_id.submitted || p_id.touched">Product Id required</small>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td><label>Product Name</label></td>
+                            <td><input type="text" name="p_name" [(ngModel)]="productItem.productName" 
+                                #p_name="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_name.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_name.submitted || p_name.touched">Product Name required</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Code</label></td>
+                            <td><input type="text" name="p_code" [(ngModel)]="productItem.productCode" 
+                                #p_code="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_code.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_code.submitted || p_code.touched">Product Code required</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Date</label></td>
+                            <td><input type="text" name="p_date" [(ngModel)]="productItem.releaseDate" 
+                                #p_date="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_date.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_date.submitted || p_date.touched">Product Date required</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Description</label></td>
+                            <td><input type="text" name="p_description" [(ngModel)]="productItem.description" 
+                                #p_description="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_description.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_description.submitted || p_description.touched">Product Description required</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Price</label></td>
+                            <td><input type="text" name="p_price" [(ngModel)]="productItem.price" 
+                                #p_price="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_price.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_price.submitted || p_price.touched">Product Price required</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Product starRating</label></td>
+                            <td><input type="text" name="p_rating" [(ngModel)]="productItem.starRating" 
+                                #p_rating="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_rating.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_rating.submitted || p_rating.touched">Product StarRating required</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Product imageUrl</label></td>
+                            <td><input type="text" name="p_image" [(ngModel)]="productItem.imageUrl" 
+                                #p_image="ngModel" [ngClass]="{ 'is-invalid': addProduct.submitted && p_image.invalid }" required>
+                                <small class="text-danger" [class.d-none]="p_image.submitted || p_image.touched">Product Image URL required</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" [disabled]="addProduct.form.invalid" class="btn btn-success" value="Add Products"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">ProductManagement</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/add" routerLinkActive="active">Add Products</a>
+      </li>
+    </ul>
+    <ul class="nav  navbar-nav navbar-right">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/register" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" style="cursor:pointer;" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+    </li>
+  </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

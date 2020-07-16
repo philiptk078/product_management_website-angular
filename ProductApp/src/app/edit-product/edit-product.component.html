@@ -1,0 +1,53 @@
+<div class="card" style="margin-top: 2%;border: solid green 2px">
+    <form (ngSubmit)="updateProduct()">
+        <div class="card-header">
+            {{title}}
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><label>Product Id</label></td>
+                            <td><input type="text" name="p_id" [(ngModel)]="productItem.productId" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Name</label></td>
+                            <td><input type="text" name="p_name" [(ngModel)]="productItem.productName" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Code</label></td>
+                            <td><input type="text" name="p_code" [(ngModel)]="productItem.productCode" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Date</label></td>
+                            <td><input type="text" name="p_date" [(ngModel)]="productItem.releaseDate" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Description</label></td>
+                            <td><input type="text" name="p_description" [(ngModel)]="productItem.description" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product Price</label></td>
+                            <td><input type="text" name="p_price" [(ngModel)]="productItem.price" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product starRating</label></td>
+                            <td><input type="text" name="p_rating" [(ngModel)]="productItem.starRating" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Product imageUrl</label></td>
+                            <td><input type="text" name="p_image" [(ngModel)]="productItem.imageUrl" required></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" class="btn btn-success" value="Update Products"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
