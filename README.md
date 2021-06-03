@@ -1,6 +1,6 @@
 # ProductManagementApp
 It's a Product Management application with Angular v10. In this application, Angular Integrated with Node, Express and MongoDB. 
-A person can register and login with their valid credintials. Only authourised persons can perform the CRUD operations - CREATE, READ, UPDATE and DELETE products.  
+A person can register and login with their valid credintials. Only authourised persons can perform the CRUD operations - CREATE, READ, UPDATE and DELETE products..  
 
 --> Server Side: Basic server setup, Database Creation - CloudMongoDB, API creation and Token verification. 
 --> Client Side: Components generation, Corresponding Services, RouteGuard and HttpInterceptor Implementation.  
